@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Math Magicians
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -68,3 +68,31 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## Author 👨🏾‍💻
+
+👤 **Ángel Díaz**
+
+- GitHub: [@ad9311](https://github.com/ad9311)
+- Twitter: [@adiaz9311](https://twitter.com/adiaz9311)
+- LinkedIn: [ad9311](https://linkedin.com/in/ad9311)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Ntwali-Josue/javascript-capstone/issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- This app would not be possible without [TheCocktailDB](https://www.thecocktaildb.com/api.php) API.
+- Thanks to Microverse [Involvement](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) API.
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
+
