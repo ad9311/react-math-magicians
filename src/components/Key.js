@@ -1,4 +1,3 @@
-/* eslint import/no-extraneous-dependencies: ["error", {"peerDependencies": true}] */
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -8,11 +7,10 @@ class Key extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
   }
 
-  /* eslint-disable react/destructuring-assignment */
   handleKeyDown(e) {
-    this.props.handleKeyDown(e.target.value);
+    const { handleKeyDown } = this.props;
+    handleKeyDown(e.target.value);
   }
-  /* eslint-enable react/destructuring-assignment */
 
   render() {
     const { value, orange } = this.props;
