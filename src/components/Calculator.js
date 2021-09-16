@@ -1,31 +1,27 @@
 import React from 'react';
-// import calculate from '../logic/calculate';
+import calculate from '../logic/calculate';
 import './calculator.css';
 import Key from './Key';
-import manageInput from '../logic/manageInput';
-// import PropTypes from 'prop-types';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.handleKeyDown = this.handleKeyDown.bind(this);
-    this.input = { total: '', next: '', oparation: '' };
-    this.state = { total: '0' };
+    this.state = { total: null, next: null };
   }
 
   handleKeyDown = (keyPressed) => {
-    this.manageInput = manageInput(keyPressed, this.input);
-    this.manageInput.next();
+    this.setState((state) => calculate(state, keyPressed));
   }
 
   render() {
     const click = this.handleKeyDown;
-    const { total } = this.state;
+    const { total, next } = this.state;
 
     return (
       <div className="keypad">
         <div className="io-container">
-          <output className="d-block text-right pr-1">{total}</output>
+          <output className="d-block text-right pr-1">{total || next || '0'}</output>
         </div>
         <div className="row">
           <Key value="AC" handleKeyDown={click} />
