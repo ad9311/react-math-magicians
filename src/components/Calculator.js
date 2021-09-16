@@ -7,21 +7,22 @@ class Calculator extends React.Component {
   constructor(props) {
     super(props);
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    this.buffer = '';
     this.state = { total: null, next: null };
   }
 
   handleKeyDown = (keyPressed) => {
-    this.setState((state) => calculate(state, keyPressed));
+    this.setState((obj) => calculate(obj, keyPressed));
   }
 
-  returnKey = (value, index = -1, array = 0) => {
+  returnKey = (value, index = 0, array = []) => {
     if (index === (array.length - 1)) {
       return (
-        <Key value={value} orange handleKeyDown={this.handleKeyDown} />
+        <Key key={value} value={value} orange handleKeyDown={this.handleKeyDown} />
       );
     }
     return (
-      <Key value={value} handleKeyDown={this.handleKeyDown} />
+      <Key key={value} value={value} handleKeyDown={this.handleKeyDown} />
     );
   }
 
@@ -33,7 +34,7 @@ class Calculator extends React.Component {
   );
 
   render() {
-    const { total, next } = this.state;
+    const { next, total, operation } = this.state;
     const firstRowArr = ['AC', '+/-', '%', '÷'];
     const secondRowArr = ['7', '8', '9', 'x'];
     const thirdRowArr = ['4', '5', '6', '-'];
@@ -48,40 +49,32 @@ class Calculator extends React.Component {
 
     const secondRow = secondRowArr.map(
       (value, index) => (
-        <div className="row" key="value">
-          {this.returnKey(value, index, secondRowArr)}
-        </div>
+        this.returnKey(value, index, secondRowArr)
       ),
     );
 
     const thirdRow = thirdRowArr.map(
       (value, index) => (
-        <div className="row" key="value">
-          {this.returnKey(value, index, thirdRowArr)}
-        </div>
+        this.returnKey(value, index, thirdRowArr)
       ),
     );
 
     const fourthRow = fourthRowArr.map(
       (value, index) => (
-        <div className="row" key="value">
-          {this.returnKey(value, index, fourthRowArr)}
-        </div>
+        this.returnKey(value, index, fourthRowArr)
       ),
     );
 
     const dotEqual = dotEqualArr.map(
       (value, index) => (
-        <div className="row" key="value">
-          {this.returnKey(value, index, dotEqualArr)}
-        </div>
+        this.returnKey(value, index, dotEqualArr)
       ),
     );
 
     return (
       <div className="keypad">
         <div className="io-container">
-          <output className="d-block text-right pr-1">{total || next || '0'}</output>
+          <output className="d-block text-right pr-1">{next || operation || total || '0'}</output>
         </div>
         {this.returnDiv(firstRow)}
         {this.returnDiv(secondRow)}
