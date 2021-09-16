@@ -10,7 +10,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <Calculator />
+      <div>
+        <Calculator />
+      </div>
     );
   }
 }
