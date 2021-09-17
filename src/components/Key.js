@@ -1,36 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Key extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleKeyDown = this.handleKeyDown.bind(this);
-  }
+const Key = (props) => {
+  const { value, orange, event } = props;
+  const classList = `key ${orange ? 'orange-bg' : 'gray-bg'}`;
 
-  handleKeyDown(e) {
-    const { handleKeyDown } = this.props;
-    handleKeyDown(e.target.value);
-  }
+  const handleClick = (e) => {
+    event(e.target.value);
+  };
 
-  render() {
-    const { value, orange } = this.props;
-    const classList = `key ${orange ? 'orange-bg' : 'gray-bg'}`;
-    return (
-      <input className={classList} type="button" value={value} onClick={this.handleKeyDown} />
-    );
-  }
-}
+  return (
+    <input className={classList} type="button" value={value} onClick={handleClick} />
+  );
+};
 
 Key.propTypes = {
   value: PropTypes.string,
   orange: PropTypes.bool,
-  handleKeyDown: PropTypes.func,
+  event: PropTypes.func,
 };
 
 Key.defaultProps = {
   value: '',
   orange: false,
-  handleKeyDown: () => undefined,
+  event: () => '',
 };
 
 export default Key;
