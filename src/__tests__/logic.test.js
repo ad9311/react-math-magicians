@@ -18,6 +18,21 @@ describe('calculate', () => {
     obj = calculate(obj, '=');
     expect(obj.total).toEqual(undefined);
   });
+
+  test('return null when AC pressed', () => {
+    let obj = { total: null };
+    obj = calculate(obj, '7');
+    obj = calculate(obj, 'AC');
+    expect(obj.total).toBeNull();
+  });
+
+  test('return floating number', () => {
+    let obj = { next: null };
+    obj = calculate(obj, '2');
+    obj = calculate(obj, '.');
+    obj = calculate(obj, '6');
+    expect(obj.next).toEqual('2.6');
+  });
 });
 
 describe('operate', () => {
