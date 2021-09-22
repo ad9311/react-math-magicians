@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test routes test calculator 1`] = `
+<h2
+  class="fs-4"
+>
+  Lets do some math!
+</h2>
+`;
+
+exports[`Test routes test home 1`] = `
+<h2
+  class="fs-4"
+>
+  Welcome to our page!
+</h2>
+`;
+
+exports[`Test routes test quotes 1`] = `
+<strong>
+   William Paul Thurston.
+</strong>
+`;
+
+exports[`test navBar nav Calculate 1`] = `
+<a
+  href="/Calculator"
+>
+  Calculator
+</a>
+`;
+
+exports[`test navBar nav Quotes 1`] = `
+<a
+  href="/Quotes"
+>
+  Quotes
+</a>
+`;
+
+exports[`test navBar nav home 1`] = `
+<a
+  href="/"
+>
+  Home
+</a>
+`;
