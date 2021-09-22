@@ -1,9 +1,8 @@
 import React from 'react';
-import {render, fireEvent, screen} from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import calculate from '../logic/calculate';
 import operate from '../logic/operate';
 import Calculator from '../components/Calculator';
-
 
 describe('calculate and operate', () => {
   test('12 / 3', () => {
@@ -20,7 +19,6 @@ describe('calculate and operate', () => {
     expect(total).toEqual('4');
   });
 });
-
 
 describe('Calculator component', () => {
   test('5 x 3', () => {

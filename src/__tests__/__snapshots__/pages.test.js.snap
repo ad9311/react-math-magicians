@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test routes test calculator 1`] = `
+<h2
+  class="fs-4"
+>
+  Lets do some math!
+</h2>
+`;
+
+exports[`Test routes test home 1`] = `
+<h2
+  class="fs-4"
+>
+  Welcome to our page!
+</h2>
+`;
+
+exports[`Test routes test quotes 1`] = `
+<strong>
+   William Paul Thurston.
+</strong>
+`;
