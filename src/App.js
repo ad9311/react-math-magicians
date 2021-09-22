@@ -4,13 +4,14 @@ import Navbar from './pages/Navbar';
 import Home from './pages/Home';
 import CalculatorPage from './pages/CalculatorPage';
 import Quote from './pages/Quote';
+import NoMatch from './pages/NoMatch';
 import './App.css';
 
 const App = () => (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <Navbar />
-    <Switch>
-      <main className="pcon-6">
+    <main className="pcon-6">
+      <Switch>
         <Route exact path="/">
           <Home />
         </Route>
@@ -20,8 +21,11 @@ const App = () => (
         <Route path="/quote">
           <Quote />
         </Route>
-      </main>
-    </Switch>
+        <Route path="*">
+          <NoMatch />
+        </Route>
+      </Switch>
+    </main>
   </Router>
 );
 
