@@ -16,7 +16,7 @@ const App = () => (
       <Route path="/calculator">
         <CalculatorPage />
       </Route>
-      <Route path="/qoute">
+      <Route path="/quote">
         <Quote />
       </Route>
     </Switch>
