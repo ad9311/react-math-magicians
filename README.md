@@ -30,6 +30,12 @@ To get a local copy up and running follow these simple example steps:
 - [Node.Js](https://nodejs.org/en/)
 - [Yarn](https://classic.yarnpkg.com/en/docs/install/#debian-stable)
 
+### Test
+
+This app was built using CRA (Create React App), this includes the [Testing Library](https://testing-library.com/docs/react-testing-library/intro). With this you can test all the app components.
+
+To run the tests, simply type this in your console inside the root directory: `npm run test` or `yarn run test`
+
 ## Author 👨🏾‍💻
 
 👤 **Ángel Díaz**
