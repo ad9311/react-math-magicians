@@ -1,13 +1,16 @@
 import React from 'react';
-import {render, fireEvent, screen} from '@testing-library/react';
+import { render, fireEvent, screen } from '@testing-library/react';
 import Key from '../components/Key';
 
 describe('Key component', () => {
   test('return button value', () => {
     let nameTest;
-    const eventTest = (e) => nameTest = e;
+    const eventTest = (e) => {
+      nameTest = e;
+      return nameTest;
+    };
 
-    render(<Key value={'1'} event={eventTest} />);
+    render(<Key value="1" event={eventTest} />);
 
     fireEvent.click(screen.getByText('1'));
 
@@ -15,7 +18,7 @@ describe('Key component', () => {
   });
 
   test('is button orange?', () => {
-    render(<Key value={'1'} orange />);
+    render(<Key value="1" orange />);
 
     const key = screen.queryAllByRole('button');
 
