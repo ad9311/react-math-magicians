@@ -10,15 +10,17 @@ const App = () => (
   <Router>
     <Navbar />
     <Switch>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/calculator">
-        <CalculatorPage />
-      </Route>
-      <Route path="/quote">
-        <Quote />
-      </Route>
+      <main className="pcon-6">
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/calculator">
+          <CalculatorPage />
+        </Route>
+        <Route path="/quote">
+          <Quote />
+        </Route>
+      </main>
     </Switch>
   </Router>
 );

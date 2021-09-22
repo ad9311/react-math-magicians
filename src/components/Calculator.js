@@ -65,7 +65,7 @@ const Calculator = () => {
   );
 
   return (
-    <div className="keypad">
+    <div className="keypad align-end w-100">
       <div className="io-container">
         <output className="d-block text-right pr-1">
           { data.next || data.operation || data.total || '0'}

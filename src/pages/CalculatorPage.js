@@ -1,11 +1,9 @@
 import Calculator from '../components/Calculator';
 
 const CalculatorPage = () => (
-  <section>
-    <h2>Lets do some math!</h2>
-    <div>
-      <Calculator />
-    </div>
+  <section className="d-flex flex-column pt-2">
+    <h2 className="fs-4">Lets do some math!</h2>
+    <Calculator />
   </section>
 );
 

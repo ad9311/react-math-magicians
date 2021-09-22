@@ -12,10 +12,10 @@ const lorem = new LoremIpsum({
 });
 
 const Home = () => (
-  <section>
-    <h2>Welcome to our page!</h2>
-    <p>{lorem.generateParagraphs(2)}</p>
-    <p>{lorem.generateParagraphs(3)}</p>
+  <section className="pt-2">
+    <h2 className="fs-4">Welcome to our page!</h2>
+    <p className="fs-2">{lorem.generateParagraphs(2)}</p>
+    <p className="fs-2">{lorem.generateParagraphs(3)}</p>
   </section>
 );
 
