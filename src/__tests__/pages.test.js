@@ -1,5 +1,6 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
+import NavBarMock from '../mocks/navbarMocks';
 import App from '../App';
 
 describe('Test routes', () => {
@@ -19,5 +20,21 @@ describe('Test routes', () => {
     render(<App />);
     fireEvent.click(screen.getByText('Quote'));
     expect(screen.getByText('William Paul Thurston.')).toMatchSnapshot();
+  });
+});
+
+describe('test navBar', () => {
+  test('nav home', () => {
+    render(<NavBarMock />);
+    expect(screen.getByText('Home')).toMatchSnapshot();
+  });
+
+  test('nav Calculate', () => {
+    render(<NavBarMock />);
+    expect(screen.getByText('Calculator')).toMatchSnapshot();
+  });
+  test('nav Quotes', () => {
+    render(<NavBarMock />);
+    expect(screen.getByText('Quotes')).toMatchSnapshot();
   });
 });

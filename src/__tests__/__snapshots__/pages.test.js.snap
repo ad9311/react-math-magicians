@@ -21,3 +21,27 @@ exports[`Test routes test quotes 1`] = `
    William Paul Thurston.
 </strong>
 `;
+
+exports[`test navBar nav Calculate 1`] = `
+<a
+  href="/Calculator"
+>
+  Calculator
+</a>
+`;
+
+exports[`test navBar nav Quotes 1`] = `
+<a
+  href="/Quotes"
+>
+  Quotes
+</a>
+`;
+
+exports[`test navBar nav home 1`] = `
+<a
+  href="/"
+>
+  Home
+</a>
+`;
