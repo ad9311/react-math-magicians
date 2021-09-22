@@ -11,6 +11,10 @@ Math Magicians is about the math's magic. This applications shows a calculator t
 - HTML/CSS
 - Webpack
 
+## Live Version
+
+To access the live version of this app follow this [link](https://ad9311.github.io/react-math-magicians/)
+
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps:
