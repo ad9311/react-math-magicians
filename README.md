@@ -13,7 +13,9 @@ Math Magicians is about the math's magic. This applications shows a calculator t
 
 ## Live Version
 
-To access the live version of this app follow this [link](https://ad9311.github.io/react-math-magicians/)
+To access the live version of this app follow these links: 
+- [Heroku](https://adiaz-magic-math.herokuapp.com/)
+- [Netlify]()
 
 ## Getting Started
 
