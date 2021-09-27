@@ -15,7 +15,7 @@ Math Magicians is about the math's magic. This applications shows a calculator t
 
 To access the live version of this app follow these links: 
 - [Heroku](https://adiaz-magic-math.herokuapp.com/)
-- [Netlify]()
+- [Netlify](https://admiring-bell-96bbc4.netlify.app/)
 
 ## Getting Started
 
